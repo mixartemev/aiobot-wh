@@ -1,0 +1,42 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=70.3", "setuptools_scm[toml]>=8.1"]
+
+[project]
+authors = [{"name" = "artemiev"}]
+description = "Aiogram webhook bot"
+dynamic = ["version"]
+license = {"file" = "LICENSE"}
+name = "aiobot-wh"
+readme = {file = "README.md", content-type = "text/markdown"}
+dependencies = [
+  "fastapi",
+  "pydantic>=2.0",
+  "pydantic-settings",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "mypy",
+  "pytest",
+  "ruff",
+  "uv",
+]
+
+[tool.ruff]
+exclude = ["./venv", "./aiobot-wh/_version.py"]
+line-length = 120
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"]}
+
+[tool.setuptools.package-data]
+ttemp = ["py.typed"]
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.setuptools_scm]
+fallback_version = "0.0.0-dev"
+write_to = "aiobot-wh/_version.py"
