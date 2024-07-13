@@ -24,8 +24,9 @@ dev = [
   "uv",
 ]
 
+# CLI Script
 [project.scripts]
-pring_args = "aiobot_wh.__main__:main"
+aiobot_start = "aiobot_wh.__main__:main"
 
 [tool.ruff]
 exclude = ["./venv", "./aiobot_wh/_version.py"]

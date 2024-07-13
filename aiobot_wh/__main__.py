@@ -8,4 +8,4 @@ def main(args: list[str] = sys.argv) -> None:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
