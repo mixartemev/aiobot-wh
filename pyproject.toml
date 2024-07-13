@@ -24,8 +24,11 @@ dev = [
   "uv",
 ]
 
+[project.scripts]
+pring_args = "aiobot_wh.__main__:main"
+
 [tool.ruff]
-exclude = ["./venv", "./aiobot-wh/_version.py"]
+exclude = ["./venv", "./aiobot_wh/_version.py"]
 line-length = 120
 
 [tool.setuptools.dynamic]
@@ -39,4 +42,4 @@ find = {}
 
 [tool.setuptools_scm]
 fallback_version = "0.0.0-dev"
-write_to = "aiobot-wh/_version.py"
+write_to = "aiobot_wh/_version.py"

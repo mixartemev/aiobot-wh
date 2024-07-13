@@ -64,4 +64,4 @@ dmypy.json
 # pytype static type analyzer
 .idea/
 # scm-version file
-aiobot-wh/_version.py
+aiobot_wh/_version.py
